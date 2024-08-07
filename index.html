@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My BIO</title>
+    <title id="page-title" onload="localization()">My BIO</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body class="info-page" id="info-page">
@@ -11,10 +11,14 @@
     <video class="avatar" autoplay loop>
         <source src="./resource/video/avatar.mp4" type="video/mp4">
     </video>
-    <h1 class="info-title">Info about me</h1>
-    <p>Name: Salat/Salad/Salut/Maxim</p>
-    <p>Age: <i>no one knows</i></p>
-    <p>Favourite music janre: Rap</p>
+    <h1 id="info-title" class="info-title">Info About Me</h1>
+    <p id="name">Name: Salat/Salad/Salut/Maxim</p>
+    <p><span id="age">Age:</span> <i id="age-value"></i></p>
+    <p id="music">Favourite music janre: Rap</p>
+    <p id="work">I'm currently working for<br>
+        <!--<div class="storyverse-text" id="storyverse-text"><p><a style="color: blue; border-color: black;">Story</a><a style="color: rgb(71, 192, 2); border-color: black;">Verse</a></p></div>-->
+    </p>
+    <img id="storyverse" src="./resource/image/png/storyverse.png" onclick="social(this)" target="_blank" class="storyverse-icon">
     <!--<p>Interesting facts: s.</p>-->
     <p>
         <img id="telegram" src="./resource/image/svg/telegram-dark.svg" onclick="social(this)" target="_blank" class="social-icon">
@@ -22,6 +26,7 @@
         <img id="youtube" src="./resource/image/svg/youtube.svg" onclick="social(this)" target="_blank" class="social-icon">
     </p>
     <div class="btn-nigth-theme" id="btn-nigth-theme" onclick="toggleNightTheme()">Light mode</div>
+    <div class="btn-change-locale" id="btn-change-locale" onclick="toggleLocale()">Language: </div>
     <script src="./script.js"></script>
 <br><br><br></div>
 </body>
