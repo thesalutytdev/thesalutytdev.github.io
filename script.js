@@ -2,7 +2,7 @@ let links = {
     "telegram": "https://www.t.me/SALUTYT",
     "discord": "https://www.discordapp.com/users/937349576942305331",
     "youtube": "https://www.youtube.com/@SALUTYT",
-    "storyverse": "https://www.t.me/StoryVerseStudioOfficial"
+    "work": "https://www.t.me/StoryVerseStudioOfficial"
 }
 let locale = {
     "en": {
