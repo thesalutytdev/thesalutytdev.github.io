@@ -4,6 +4,7 @@ let links = {
     "youtube": "https://www.youtube.com/@SALUTYT",
     "work": "https://www.t.me/StoryVerseStudioOfficial"
 }
+
 let locale = {
     "en": {
         "page-title": "My BIO",
@@ -46,6 +47,7 @@ let locale = {
         }
     }
 }
+
 let images = {
     "links": {
         "dark": {
@@ -62,6 +64,7 @@ let images = {
     "work": "../resource/image/png/storyverse.png",
     "avatar": "../resource/video/avatar.mp4"
 }
+
 let current_locale = "en";
 let isNightTheme = true;
 
