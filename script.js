@@ -1,8 +1,3 @@
-window.onload = (event) => {
-    onWindowLoad(event)
-};
-
-let isNightTheme = true;
 let links = {
     "telegram": "https://www.t.me/SALUTYT",
     "discord": "https://www.discordapp.com/users/937349576942305331",
@@ -14,6 +9,8 @@ let locale = {
         "page-title": "My BIO",
         "info-title": "Info About Me",
         "name": "Name: Salat/Salad/Salut/Maxim",
+        "gender": "Gender: ",
+        "gender-value": "Male",
         "age": "Age: ",
         "age-value": "404: Not found",
         "music": "Favourite music genre: Rap",
@@ -32,6 +29,8 @@ let locale = {
         "page-title": "Моё Био",
         "info-title": "Информация Обо Мне",
         "name": "Имя: Салат/Salad/Salut/Максим",
+        "gender": "Пол: ",
+        "gender-value": "Мужской",
         "age": "Возраст: ",
         "age-value": "404: Не найдено",
         "music": "Любимая жанр музыки: Реп",
@@ -47,7 +46,28 @@ let locale = {
         }
     }
 }
+let images = {
+    "links": {
+        "dark": {
+            "telegram": "../resource/image/svg/telegram-dark.svg",
+            "discord": "../resource/image/svg/discord-dark.svg",
+            "youtube": "../resource/image/svg/youtube.svg"
+        },
+        "light": {
+            "telegram": "../resource/image/svg/telegram-light.svg",
+            "discord": "../resource/image/svg/discord-light.svg",
+            "youtube": "../resource/image/svg/youtube-light.svg"
+        }
+    },
+    "work": "../resource/image/png/storyverse.png",
+    "avatar": "../resource/video/avatar.mp4"
+}
 let current_locale = "en";
+let isNightTheme = true;
+
+window.onload = (event) => {
+    onWindowLoad(event)
+};
 
 function toggleNightTheme() {
     isNightTheme = !isNightTheme;
@@ -115,6 +135,12 @@ function localization() {
     var name = document.getElementById("name")
     name.textContent = locale[current_locale]["name"]
 
+    var gender = document.getElementById("gender")
+    gender.textContent = locale[current_locale]["gender"]
+
+    var gender_value = document.getElementById("gender-value")
+    gender_value.textContent = locale[current_locale]["gender-value"]
+
     var age = document.getElementById("age")
     age.textContent = locale[current_locale]["age"]
 
@@ -142,6 +168,36 @@ function localization() {
     locale_btn.textContent = `${locale[current_locale]["current-locale"]} ${locale[current_locale]["lang"][current_locale]}`
 }
 
+function imageSetter() {
+    var avatar = document.getElementById("avatar")
+    avatar.src = images["avatar"]
+
+    var storyverse = document.getElementById("work")
+    storyverse.src = images["work"]
+
+    var social_tg = document.getElementById("telegram")
+    if (isNightTheme) {
+        social_tg.src = images["links"]["dark"]["telegram"]
+    } else {
+        social_tg.src = images["links"]["light"]["telegram"]
+    }
+
+    var social_ds = document.getElementById("discord")
+    if (isNightTheme) {
+        social_ds.src = images["links"]["dark"]["discord"]
+    } else {
+        social_ds.src = images["links"]["light"]["discord"]
+    }
+
+    var social_yt = document.getElementById("youtube")
+    if (isNightTheme) {
+        social_yt.src = images["links"]["dark"]["youtube"]
+    } else {
+        social_yt.src = images["links"]["light"]["youtube"]
+    }
+}
+
 function onWindowLoad(event) {
     localization()
+    imageSetter()
 }

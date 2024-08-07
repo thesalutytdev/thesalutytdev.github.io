@@ -1,0 +1,16 @@
+{
+    "links": {
+        "dark": {
+            "telegram": "../resource/image/svg/telegram-dark.svg",
+            "discord": "../resource/image/svg/discord-dark.svg",
+            "youtube": "../resource/image/svg/youtube.svg"
+        },
+        "light": {
+            "telegram": "../resource/image/svg/telegram-light.svg",
+            "discord": "../resource/image/svg/discord-light.svg",
+            "youtube": "../resource/image/svg/youtube-light.svg"
+        }
+    },
+    "work": "../resource/image/png/storyverse.png",
+    "avatar": "../resource/video/avatar.mp4"
+}

@@ -1,0 +1,42 @@
+{
+    "en": {
+        "page-title": "My BIO",
+        "info-title": "Info About Me",
+        "name": "Name: Salat/Salad/Salut/Maxim",
+        "gender": "Gender: ",
+        "gender-value": "Male",
+        "age": "Age: ",
+        "age-value": "404: Not found",
+        "music": "Favourite music genre: Rap",
+        "work": "I'm currently working for:",
+        "current-locale": "Language: ",
+        "mode": {
+            "dark": "Night mode",
+            "light": "Light mode"
+        },
+        "lang": {
+            "ru": "Russian",
+            "en": "English"
+        }
+    },
+    "ru": {
+        "page-title": "Моё Био",
+        "info-title": "Информация Обо Мне",
+        "name": "Имя: Салат/Salad/Salut/Максим",
+        "gender": "Пол: ",
+        "gender-value": "Мужской",
+        "age": "Возраст: ",
+        "age-value": "404: Не найдено",
+        "music": "Любимая жанр музыки: Реп",
+        "work": "На данный момент я работаю в:",
+        "current-locale": "Язык: ",
+        "mode": {
+            "dark": "Темная тема",
+            "light": "Светлая тема"
+        },
+        "lang": {
+            "ru": "Русский",
+            "en": "Английский"
+        }
+    }
+}
