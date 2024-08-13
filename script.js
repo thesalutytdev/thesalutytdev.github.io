@@ -125,6 +125,12 @@ function social(element) {
 
 function change_locale(locale) {
     current_locale = locale
+    if (!(document.cookie.startsWith("lang="))) {
+        document.cookie = "lang=" + locale + "; max-age=31536000"
+    } else {
+        document.cookie = "lang=" + locale + "; max-age=31536000"
+    }
+
 
     localization() 
 }
@@ -200,7 +206,15 @@ function imageSetter() {
     }
 }
 
+function locale_cookie() {
+    if (document.cookie.startsWith("lang=")) {
+        current_locale = document.cookie.split(";")[0].split("=")[1]
+        localization()
+    }
+}
+
 function onWindowLoad(event) {
     localization()
     imageSetter()
+    locale_cookie()
 }
