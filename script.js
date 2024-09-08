@@ -75,8 +75,12 @@ window.onload = (event) => {
 function toggleNightTheme() {
     isNightTheme = !isNightTheme;
 
+    change_theme(isNightTheme)
+}
+
+function change_theme(theme) {
     var el = document.getElementById("info-page")
-    if (isNightTheme) {
+    if (theme == "dark" || theme == "night" || theme) {
         el.style.backgroundColor = "black";
 
         var btn = document.getElementById("btn-nigth-theme")
@@ -197,7 +201,7 @@ function imageSetter() {
     } else {
         social_ds.src = images["links"]["light"]["discord"]
     }
-
+// Theme set to light.
     var social_yt = document.getElementById("youtube")
     if (isNightTheme) {
         social_yt.src = images["links"]["dark"]["youtube"]
@@ -224,6 +228,10 @@ function onWindowLoad(event) {
     } else {
         change_locale("en")
     }
+
+    const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)")
+    change_theme(isDarkTheme.matches)
+    
 
     localization()
     imageSetter()
