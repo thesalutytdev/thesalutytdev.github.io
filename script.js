@@ -213,7 +213,18 @@ function locale_cookie() {
     }
 }
 
+function avatar_click() {
+    location.reload()
+}
+
 function onWindowLoad(event) {
+    let user_lang = navigator.language || navigator.userLanguage
+    if (user_lang == "ru" || user_lang == "ru-RU") {
+        change_locale("ru")
+    } else {
+        change_locale("en")
+    }
+
     localization()
     imageSetter()
     locale_cookie()
