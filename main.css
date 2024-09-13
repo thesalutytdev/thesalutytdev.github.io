@@ -87,6 +87,40 @@
     transition: transform 0.3s ease;
 }
 
+.btn-change-locale {
+    border-radius: 10px;
+    background-color: black;
+    width: 30%;
+    height: 40%;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+    margin-left: 35%;
+    margin-top: 10px;
+    font-size: 17px;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-change-locale:hover {
+    background-color: rgb(60, 60, 60);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    transition: border-radius 0.6 ease;
+}
+
+.btn-change-locale:active {
+    background-color: rgb(90, 90, 90);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 .avatar {
     width: 30%;
     height: 30%;
@@ -139,37 +173,4 @@
     margin-left: 35%;
     font-size: 20px;
     user-select: none;
-}
-
-.btn-change-locale {
-    border-radius: 10px;
-    background-color: black;
-    width: 30%;
-    height: 40%;
-    align-self: center;
-    text-align: center;
-    align-items: center;
-    color: white;
-    margin-left: 35%;
-    margin-top: 10px;
-    font-size: 17px;
-    user-select: none;
-}
-
-.btn-change-locale:hover {
-    background-color: rgb(60, 60, 60);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-    border-radius: 5px;
-    transition: border-radius 0.6 ease;
-}
-
-.btn-change-locale:active {
-    background-color: rgb(90, 90, 90);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
 }

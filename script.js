@@ -17,6 +17,8 @@ let locale = {
         "music": "Favourite music genre: Rap",
         "work": "I'm currently working for:",
         "current-locale": "Language: ",
+        "fav-book": "Favourite book: ",
+        "fav-book-value": "1984 by George Orwell",
         "mode": {
             "dark": "Night mode",
             "light": "Light mode"
@@ -37,6 +39,8 @@ let locale = {
         "music": "Любимая жанр музыки: Реп",
         "work": "На данный момент я работаю в:",
         "current-locale": "Язык: ",
+        "fav-book": "Любимая книга: ",
+        "fav-book-value": "1984 Оруэлл",
         "mode": {
             "dark": "Темная тема",
             "light": "Светлая тема"
@@ -163,6 +167,12 @@ function localization() {
     var music = document.getElementById("music")
     music.textContent = locale[current_locale]["music"]
 
+    var fav_book = document.getElementById("fav-book")
+    fav_book.textContent = locale[current_locale]["fav-book"]
+
+    var fav_book_value = document.getElementById("fav-book-value")
+    fav_book_value.textContent = locale[current_locale]["fav-book-value"]
+
     var work = document.getElementById("work")
     work.textContent = locale[current_locale]["work"]
 
@@ -232,7 +242,6 @@ function onWindowLoad(event) {
     const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)")
     change_theme(isDarkTheme.matches)
     
-
     localization()
     imageSetter()
     locale_cookie()
