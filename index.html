@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title" onload="localization()">My BIO</title>
+    <title id="page-title" onload="localization()">Bio</title>
     <link rel="stylesheet" href="./main.css">
 </head>
+
 <body class="info-page" id="info-page">
-<div id="info" class="info"><br>
-    <video id="avatar" class="avatar" onclick="avatar_click()" autoplay loop>
+    <div id="info" class="info"><br>
+        <video id="avatar" class="avatar" onclick="avatar_click()" autoplay loop>
         <source src="./resource/video/avatar.mp4" type="video/mp4">
     </video>
-    <h1 id="info-title" class="info-title">Info About Me</h1>
-    <p id="name">Name: Salat/Salad/Salut/Maxim</p>
-    <p><span id="gender">Gender: </span> <span id="gender-value">Male</span></p>
-    <p><span id="age">Age:</span> <i id="age-value"></i></p>
-    <p id="music">Favourite music janre: Rap</p>
-    <p><span id="fav-book">Favourite book: </span><i id="fav-book-value"></i></p>
-    <p id="work">I'm currently working for<br>
-        <!--<div class="storyverse-text" id="storyverse-text"><p><a style="color: blue; border-color: black;">Story</a><a style="color: rgb(71, 192, 2); border-color: black;">Verse</a></p></div>-->
-    </p>
-    <img id="work" src="./resource/image/png/storyverse.png" onclick="social(this)" target="_blank" class="storyverse-icon">
-    <!--<p>Interesting facts: s.</p>-->
-    <p>
-        <img id="telegram" src="./resource/image/svg/telegram-dark.svg" onclick="social(this)" target="_blank" class="social-icon">
-        <img id="discord" src="./resource/image/svg/discord-dark.svg" onclick="social(this)" target="_blank" class="social-icon">
-        <img id="youtube" src="./resource/image/svg/youtube.svg" onclick="social(this)" target="_blank" class="social-icon">
-    </p>
-    <div class="btn-nigth-theme" id="btn-nigth-theme" onclick="toggleNightTheme()">Light mode</div>
-    <div class="btn-change-locale" id="btn-change-locale" onclick="toggleLocale()">Language: </div>
+        <h1 id="info-title" class="info-title">Info About Me</h1>
+        <p id="name">Name: Salat/Salad/Salut/Maxim</p>
+        <p><span id="gender">Gender: </span> <span id="gender-value"></span></p>
+        <p><span id="age">Age:</span> <i id="age-value"></i></p>
+        <p id="music">Favourite music janre: Rap</p>
+        <p><span id="fav-book">Favourite book: </span><i id="fav-book-value"></i></p>
+        <p id="work">I'm currently working for:<br>
+            <!--<div class="storyverse-text" id="storyverse-text"><p><a style="color: blue; border-color: black;">Story</a><a style="color: rgb(71, 192, 2); border-color: black;">Verse</a></p></div>-->
+        </p>
+        <span id="work-value-span"><i id="work-value"></i></span>
+        <!--<img style="display: none;" id="work" src="./resource/image/png/storyverse.png" onclick="social(this)" target="_blank" class="storyverse-icon">-->
+        <!--<p>Interesting facts: s.</p>-->
+        <p>
+            <img id="telegram" src="./resource/image/svg/telegram-dark.svg" onclick="social(this)" target="_blank" class="social-icon">
+            <img id="discord" src="./resource/image/svg/discord-dark.svg" onclick="social(this)" target="_blank" class="social-icon">
+            <img id="youtube" src="./resource/image/svg/youtube.svg" onclick="social(this)" target="_blank" class="social-icon">
+        </p>
+        <div class="btn-nigth-theme" id="btn-nigth-theme" onclick="toggleNightTheme()">Light mode</div>
+        <div class="btn-change-locale" id="btn-change-locale" onclick="toggleLocale()">Language: </div>
 
-<br><br><br></div>
-<script src="./script.js"></script>
+        <!---
+        <details class="more-info-details">
+            <summary class="more-info-text" id="more-info-text">More info</summary>
+            <p class="more-info" id="more-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui pariatur inventore ab doloribus commodi numquam quos necessitatibus repellat quasi modi alias cum excepturi nobis saepe culpa veniam, optio, cumque ex?</p>
+        </details>-->
+        <br><br>
+    </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>

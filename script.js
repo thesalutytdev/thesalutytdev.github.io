@@ -1,15 +1,15 @@
 let links = {
     "telegram": "https://www.t.me/SALUTYT",
     "discord": "https://www.discordapp.com/users/937349576942305331",
-    "youtube": "https://www.youtube.com/@SALUTYT",
+    "youtube": "https://www.youtube.com/SALUTYT",
     "work": "https://www.t.me/StoryVerseStudioOfficial"
 }
 
 let locale = {
     "en": {
-        "page-title": "My BIO",
+        "page-title": "Bio",
         "info-title": "Info About Me",
-        "name": "Name: Salat/Salad/Salut/Maxim",
+        "name": "Name: Salat/Maxim",
         "gender": "Gender: ",
         "gender-value": "Male",
         "age": "Age: ",
@@ -19,6 +19,7 @@ let locale = {
         "current-locale": "Language: ",
         "fav-book": "Favourite book: ",
         "fav-book-value": "1984 by George Orwell",
+        "work-value": "StoryVerse Studio, Nomad Mine, Crystal Story Team and others...",
         "mode": {
             "dark": "Night mode",
             "light": "Light mode"
@@ -29,9 +30,9 @@ let locale = {
         }
     },
     "ru": {
-        "page-title": "Моё Био",
+        "page-title": "Био",
         "info-title": "Информация Обо Мне",
-        "name": "Имя: Салат/Salad/Salut/Максим",
+        "name": "Имя: Салат/Максим",
         "gender": "Пол: ",
         "gender-value": "Мужской",
         "age": "Возраст: ",
@@ -41,6 +42,7 @@ let locale = {
         "current-locale": "Язык: ",
         "fav-book": "Любимая книга: ",
         "fav-book-value": "1984 Оруэлл",
+        "work-value": "StoryVerse Studio, Nomad Mine, Crystal Story Team и другие...",
         "mode": {
             "dark": "Темная тема",
             "light": "Светлая тема"
@@ -140,7 +142,7 @@ function change_locale(locale) {
     }
 
 
-    localization() 
+    localization()
 }
 
 function localization() {
@@ -175,6 +177,9 @@ function localization() {
 
     var work = document.getElementById("work")
     work.textContent = locale[current_locale]["work"]
+
+    var work_value = document.getElementById("work-value")
+    work_value.textContent = locale[current_locale]["work-value"]
 
     var btn = document.getElementById("btn-nigth-theme")
     if (isNightTheme) {
@@ -211,7 +216,7 @@ function imageSetter() {
     } else {
         social_ds.src = images["links"]["light"]["discord"]
     }
-// Theme set to light.
+    // Theme set to light.
     var social_yt = document.getElementById("youtube")
     if (isNightTheme) {
         social_yt.src = images["links"]["dark"]["youtube"]
@@ -231,6 +236,10 @@ function avatar_click() {
     location.reload()
 }
 
+function moreInfo() {
+
+}
+
 function onWindowLoad(event) {
     let user_lang = navigator.language || navigator.userLanguage
     if (user_lang == "ru" || user_lang == "ru-RU") {
@@ -241,7 +250,7 @@ function onWindowLoad(event) {
 
     const isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)")
     change_theme(isDarkTheme.matches)
-    
+
     localization()
     imageSetter()
     locale_cookie()
