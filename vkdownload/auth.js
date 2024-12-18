@@ -1,7 +1,7 @@
 // Replace these with your own values
 const clientId = '84arU4Jkgk9BqaAdbAHW';
 const clientSecret = '828113a4828113a4828113a45581a7b46088281828113a4e5e3f4d4ef3442ca72ca7254';
-const redirectUri = 'https://thesalutytdev.github.io';
+const redirectUri = 'https://thesalutytdev.github.io/vkdownload/index.html';
 
 // Step 1: Redirect the user to the authorization URL
 const authorizationUrl = `https://oauth.vk.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code`;
