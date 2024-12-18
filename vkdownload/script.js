@@ -9,6 +9,6 @@ async function main() {
     console.log(userInfo);
 }
 
-async function auth() {
-    await main();    
+function auth() {
+    main();    
 }
